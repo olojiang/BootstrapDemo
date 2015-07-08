@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/vendor/jquery-1.11.2.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/vendor/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>dropdown</h1>
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="dropdown1">
+                Topic 1 <span class="caret"></span>
+            </button>
+            <ul role="menu" class="dropdown-menu" aria-labelledby="dropdown1">
+                <li role="presentation">
+                    <a role="menuitem" href="#">
+                        <span class="glyphicon glyphicon-apple"></span> Menu Item 1
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="#">
+                        <span class="glyphicon glyphicon-star"></span> Menu Item 2
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="#">
+                        <span class="glyphicon glyphicon-wrench"></span> Menu Item 3
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h1>dropdown with divider</h1>
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="dropdown2">
+                Topic 2 <span class="caret"></span>
+            </button>
+            <ul role="menu" class="dropdown-menu" aria-labelledby="dropdown2">
+                <li role="presentation">
+                    <a role="menuitem" href="#">
+                        <span class="glyphicon glyphicon-apple"></span> Menu Item 1
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="#">
+                        <span class="glyphicon glyphicon-star"></span> Menu Item 2
+                    </a>
+                </li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation">
+                    <a role="menuitem" href="#">
+                        <span class="glyphicon glyphicon-wrench"></span> Menu Item 3
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h1>dropdown with header</h1>
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="dropdown3">
+                Topic 3 <span class="caret"></span>
+            </button>
+            <ul role="menu" class="dropdown-menu" aria-labelledby="dropdown3">
+                <li role="presentation" class="dropdown-header">Header 1</li>
+                <li role="presentation">
+                    <a role="menuitem" href="#">
+                        <span class="glyphicon glyphicon-apple"></span> Menu Item 1
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="#">
+                        <span class="glyphicon glyphicon-star"></span> Menu Item 2
+                    </a>
+                </li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation" class="dropdown-header">Header 2</li>
+                <li role="presentation">
+                    <a role="menuitem" href="#">
+                        <span class="glyphicon glyphicon-wrench"></span> Menu Item 3
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

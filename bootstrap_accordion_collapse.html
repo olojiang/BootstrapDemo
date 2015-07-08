@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="js/vendor/jquery-1.11.2.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/vendor/bootstrap.css" />
+
+    <script type="text/javascript">
+        $(function(){
+            $('#bt1').on('click', function(){
+                $('#p2').collapse('toggle');
+            });
+
+            $('#bt2').on('click', function(){
+                $('#p1').collapse('show');
+            });
+
+            $('#bt3').on('click', function(){
+                $('#p2').collapse('hide');
+            });
+
+            $('#bt4').on('click', function(){
+                $('#p2').collapse('show');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple collapse, data-toggle="collapse", data-target="#id", id, collapse in</h1>
+        <p>
+            <button type="button" data-toggle="collapse" data-target="#section1">Open Section</button>
+        </p>
+        <p id="section1" class="collapse fade">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia nesciunt omnis repudiandae ullam veniam? Cumque doloribus esse excepturi expedita, illo provident quibusdam quidem sit? Adipisci amet culpa qui quidem voluptas.
+        </p>
+
+        <h1>Group of collapse with panel-group, data-parent => parentId</h1>
+        <div id="parentId">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <div class="panel-title" data-parent="#parentId" data-toggle="collapse" data-target="#panel1">Warning Title</div>
+                </div>
+                <div class="panel-body panel-collapse collapse in" data-class="collapse" id="panel1">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fugiat molestiae mollitia nulla porro praesentium recusandae vero? Accusamus autem consectetur, dolores earum quis quo quos ratione, similique vero, vitae voluptatem.
+                </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title" data-toggle="collapse" data-target="#panel2" data-parent="#parentId">Info title</div>
+                </div>
+                <div class="panel-body panel-collapse collapse" data-class="collapse" id="panel2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquid consectetur dolorum expedita impedit ipsam itaque iure, laboriosam molestiae natus nihil placeat quam, qui quisquam reiciendis repellendus sapiente voluptatibus.
+                </div>
+            </div>
+        </div>
+
+        <h1>Group of collapse with panel-group and a link</h1>
+        <div id="parentId2">
+            <div class="panel panel-danger">
+                <div class="panel-heading panel-title">
+                    <a data-toggle="collapse" data-parent="#parentId2" href="#p1">danger title</a>
+                </div>
+                <div class="panel-body panel-collapse collapse in" id="p1">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi ipsam modi nisi obcaecati optio quas reprehenderit, sequi, sint vel, vero vitae. Asperiores aspernatur dolore ducimus maiores numquam repellat vel.
+                </div>
+            </div>
+
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a data-toggle="collapse" data-parent="#parentId2" href="#p2">warning title</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-collapse collapse" id="p2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores eaque laudantium officia quas quis recusandae. Consectetur dolor ea facilis harum illum iure maiores molestias porro suscipit tenetur. Iste, laborum!
+                </div>
+            </div>
+        </div>
+
+        <h1>event for panel: show, hide, toggle</h1>
+
+        <p>
+            <button type="button" class="btn btn-primary" id="bt1">p2 toggle</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-danger" id="bt2">p1 show</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-info" id="bt3">p2 hide</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-success" id="bt4">p2 show</button>
+        </p>
+    </div>
+</body>
+</html>

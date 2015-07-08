@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/vendor/jquery-1.11.2.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/vendor/bootstrap.css" />
+
+    <script type="text/javascript">
+        $(function(){
+            $('#bt1').on('click', function(evt){
+                $('.alert-danger').alert('close');
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>alert, alert-success, alert-primary, alert-warning, alert-info, <alert-danger></alert-danger></h1>
+        <div class="alert alert-success">alert-success</div>
+        <div class="alert alert-primary">alert-primary</div>
+        <div class="alert alert-warning">alert-warning</div>
+        <div class="alert alert-info">alert-info</div>
+        <div class="alert alert-danger">alert-danger</div>
+
+        <h1>data-dismiss='alert' class='close'</h1>
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            alert-success</div>
+        <div class="alert alert-info">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            alert-info</div>
+        <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            alert-warning</div>
+        <div class="alert alert-danger" id="danger1">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            alert-danger</div>
+
+        <h1>alert-link</h1>
+        <div class="alert alert-danger">
+            <a class="alert-link" href="#">alert-danger</a>
+        </div>
+        <div class="alert alert-success">
+            <a class="alert-link" href="#">alert-success</a>
+        </div>
+
+        <h1>button event</h1>
+        <p>
+            <button type="button" id="bt1" class="btn btn-danger">Remove danger</button>
+    </div>
+</body>
+</html>

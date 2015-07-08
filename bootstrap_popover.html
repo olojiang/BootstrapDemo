@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/vendor/jquery-1.11.2.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/vendor/bootstrap.css" />
+
+    <script type="text/javascript">
+        $(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>title, data-container, data-toggle=popover, data-placement, data-content</h1>
+        <h1>Must active by jQuery</h1>
+
+        <button type="button" title="Title0" class="btn btn-default"
+                data-container="body"
+                data-toggle="popover"
+                data-placement="right"
+                data-content="Right Content">right</button>
+
+        <button type="button" title="Title1" class="btn btn-info"
+                data-container="body"
+                data-toggle="popover"
+                data-placement="top"
+                data-content="Top Content">top</button>
+
+        <button type="button" title="Title2" class="btn btn-warning"
+                data-container="body"
+                data-toggle="popover"
+                data-placement="bottom"
+                data-content="Bottom Content">bottom</button>
+        <button type="button" title="Title3" class="btn btn-danger"
+                data-container="body"
+                data-toggle="popover"
+                data-placement="left"
+                data-content="Left Content">left</button>
+    </div>
+</body>
+</html>

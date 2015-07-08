@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="js/vendor/jquery-1.11.2.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/vendor/bootstrap.css" />
+
+    <script type="text/javascript">
+        $(function(){
+            // Must enabled with javascript
+            $('a[data-toggle=tooltip]').tooltip();
+
+            // Events for the tooltip
+            $('#bt1').tooltip('toggle');
+            $('#bt2').tooltip('show');
+            $('#bt3').tooltip('show').tooltip('hide');
+            $('#bt4').tooltip('destroy');
+
+            // Events for the tooltip
+            var item = $('#bt5').tooltip();
+            item.on('show.bs.tooltip', function(evt){
+                console.info("show.bs.tooltip", evt);
+            });
+            item.on('shown.bs.tooltip', function(evt){
+                console.info("shown.bs.tooltip", evt);
+            });
+            item.on('hide.bs.tooltip', function(evt){
+                console.info("hide.bs.tooltip", evt);
+            });
+            item.on('hidden.bs.tooltip', function(evt){
+                console.info("hidden.bs.tooltip", evt);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>data-toggle="tooltip", data-placement</h1>
+        <p>
+            <a title="TitleExample" data-toggle="tooltip" data-placement="top" href="#">Hello tooltip top 1</a></p>
+
+        <p><a
+                title="TitleExample" data-toggle="tooltip" data-placement="bottom" href="#">Hello tooltip bottom 2</a>
+        </p>
+
+        <p><a
+                title="TitleExample" data-toggle="tooltip" data-placement="left" href="#">Hello tooltip left 3</a></p>
+
+        <p><a
+                title="TitleExample" data-toggle="tooltip" data-placement="right" href="#">Hello tooltip right 4</a>
+        </p>
+
+        <h1>methods: toggle, show, hide, destroy</h1>
+
+        <p>
+            <button id="bt1" type="button" title="button1" data-toggle="tooltip" data-placement="top">Button 1</button>
+        </p>
+        <p>
+            <button id="bt2" type="button" title="button2" data-toggle="tooltip" data-placement="bottom">Button 2</button>
+        </p>
+        <p>
+            <button id="bt3" type="button" title="button3" data-toggle="tooltip" data-placement="left">Button 3</button>
+        </p>
+        <p>
+            <button id="bt4" type="button" title="button4" data-toggle="tooltip" data-placement="right">Button 4</button>
+        </p>
+
+        <h1>evens: show.bs.tooltip, shown.bs.tooltip, hide.bs.tooltip, hidden.bs.tooltip</h1>
+        <p>
+            <button id="bt5" type="button" title="button5" data-toggle="tooltip" data-placement="right">Button 5</button>
+        </p>
+    </div>
+</body>
+</html>

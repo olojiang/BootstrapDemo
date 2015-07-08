@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/vendor/jquery-1.11.2.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/vendor/bootstrap.css" />
+
+    <script type="text/javascript">
+        $(function(){
+            $('a[data-toggle=tab]').on('show.bs.tab', function(evt){
+                $('#lastTab').text(evt.relatedTarget);
+                $('#currentTab').text(evt.currentTarget);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>nav nav-tabs</h1>
+        <h3>active</h3>
+        <ul class="nav nav-tabs">
+            <li><a href="#tab1">Item 1</a></li>
+            <li class="active"><a href="#tab2">Item 2</a></li>
+            <li><a href="#tab3">Item 3</a></li>
+        </ul>
+
+        <h1>nav nav-pills</h1>
+        <ul class="nav nav-pills">
+            <li><a href="#tab1">Item 1</a></li>
+            <li><a href="#tab2">Item 2</a></li>
+            <li class="active"><a href="#tab3">Item 3</a></li>
+        </ul>
+
+        <h1>nav nav-pills nav-stacked</h1>
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#tab1">Item 1</a></li>
+            <li class="active"><a href="#tab2">Item 2</a></li>
+            <li><a href="#tab3">Item 3</a></li>
+        </ul>
+
+        <h1>nav nav-pills nav-justified, active, disabled</h1>
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="#tab1">Item 1</a></li>
+            <li><a href="#tab2">Item 2</a></li>
+            <li><a href="#tab3">Item 3</a></li>
+            <li class="active"><a href="#tab4">Item 4</a></li>
+            <li><a href="#tab5">Item 5</a></li>
+            <li class="disabled"><a href="#tab6">Item 6</a></li>
+            <li><a href="#tab7">Item 7</a></li>
+        </ul>
+
+        <h1><mark>tab-content</mark> <mark>tab-pane</mark> with <code>id</code>, <code>tabindex</code></h1>
+        <h3>on('show.bs.tab', function())</h3>
+        <h3>Last Tab: <span id="lastTab"></span></h3>
+        <h3>Current Tab: <span id="currentTab"></span></h3>
+        <ul class="nav nav-tabs">
+            <li><a href="#tab1" data-toggle="tab">Tab 1</a></li>
+            <li><a href="#tab2" data-toggle="tab">Tab 2</a></li>
+            <li class="active"><a href="#tab3" data-toggle="tab">Tab 3</a></li>
+            <li><a href="#tab4" data-toggle="tab">Tab 4</a></li>
+            <li><a href="#tab5" data-toggle="tab">Tab 5</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade" id="tab1" tabindex="1">Tab Content 001</div>
+            <div class="tab-pane fade" id="tab2" tabindex="2">Tab Content 002</div>
+            <div class="tab-pane fade in active" id="tab3" tabindex="3">Tab Content 003</div>
+            <div class="tab-pane fade" id="tab4" tabindex="4">Tab Content 004</div>
+            <div class="tab-pane fade" id="tab5" tabindex="5">Tab Content 005</div>
+        </div>
+    </div>
+</body>
+</html>

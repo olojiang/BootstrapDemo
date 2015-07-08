@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="js/vendor/jquery-1.11.2.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/vendor/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>input-group, input-group-addon</h1>
+        <p class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+            <input type="text" class="form-control" />
+        </p>
+        <p class="input-group">
+            <span class="input-group-addon">@</span>
+            <input class="form-control" placeholder="Item" type="text"/>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-alert"></span></span>
+        </p>
+        <p class="input-group">
+            <input class="form-control" placeholder="inputSomething" type="text"/>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span></span>
+        </p>
+
+        <h1>input-group-lg, input-group, input-group-sm</h1>
+        <p class="input-group input-group-lg">
+            <span class="input-group-addon">@</span>
+            <input class="form-control" placeholder="Item" type="text"/>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-alert"></span></span>
+        </p>
+        <p class="input-group input-group">
+            <span class="input-group-addon">@</span>
+            <input class="form-control" placeholder="Item" type="text"/>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-alert"></span></span>
+        </p>
+        <p class="input-group input-group-sm">
+            <span class="input-group-addon">@</span>
+            <input class="form-control" placeholder="Item" type="text"/>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-alert"></span></span>
+        </p>
+
+        <h1>check box and radio button</h1>
+        <p class="input-group">
+            <span class="input-group-addon"><input type="radio"/></span>
+            <input class="form-control" placeholder="radio" type="text"/>
+        </p>
+        <p class="input-group">
+            <span class="input-group-addon"><input type="checkbox"/></span>
+            <input class="form-control" placeholder="checkbox" type="text"/>
+        </p>
+
+        <h1>button as addon - input-group-btn</h1>
+        <p class="input-group">
+            <span class="input-group-btn"><button class="btn btn-success" type="button"><span class="glyphicon glyphicon-search"></span></button></span>
+            <input class="form-control" placeholder="button as addon" type="text"/>
+        </p>
+
+        <h1>button as dropdown list</h1>
+        <h3>[data-toggle=dropdown]</h3>
+        <h3>.dropdown-toggle, .dropdown-menu</h3>
+        <h4>caret</h4>
+        <form role="form">
+        <!-- for drop down work, need to place input-group with div, otherwise, span, and p, won't work -->
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-success">Start2</button>
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Item 1</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+            </span>
+            <input class="form-control" placeholder="text" type="text"/>
+            <span class="input-group-btn">
+                 <!--<button type="button" class="btn btn-default-->
+                     <!--dropdown-toggle" data-toggle="dropdown">-->
+                     <!--DropdownMenu-->
+                     <!--<span class="caret"></span></button>-->
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Start <span class="caret"></span></button>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+            </span>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
